@@ -2,7 +2,12 @@
 
 $styleVersion: 4.3;
 
-$primary: #2bb38a;
+$primary: #8c2bb3;
+$dark: #2bb3b3;
+$inverse: #FFC;
+$text: #333;
+
+$h1-font-size: 32px;
 
 @import "~@spartacus/styles/index";
 
@@ -10,7 +15,15 @@ p {
   font-size: 12px;
 }
 
-cx-login a {
-  color: pink;
-  font-weight: 900;
-}
+// cx-login a {
+//   color: pink;
+//   font-weight: 900;
+//   background-color: var(--cx-color-warning);
+// }
+
+// default CSS approach to overwrite root var
+
+// :root {
+//   --cx-color-primary: red;
+//   --cx-buttons-border-radius: 0.5rem;
+// }
