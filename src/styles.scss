@@ -4,15 +4,11 @@ $styleVersion: 4.3;
 
 $primary: #2bb38a;
 
-@import '~@spartacus/styles/index';
+@import "~@spartacus/styles/index";
 
-body {
-  color: red;
+p {
+  font-size: 12px;
 }
-
-p{font-size:12px;}
-
-
 
 cx-login a {
   color: pink;
