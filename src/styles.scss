@@ -2,24 +2,27 @@
 
 $styleVersion: 4.3;
 
+// re-assigned new value to scss variables
 $primary: #8c2bb3;
-$dark: #2bb3b3;
+$dark: #6E368F;
 $inverse: #FFC;
 $text: #333;
 
-$h1-font-size: 32px;
+$font-weight-normal: 500;
 
+// Sparta lib import
 @import "~@spartacus/styles/index";
 
-p {
-  font-size: 12px;
+header {
+
+    a:hover {
+        color: #FFF;
+    }
 }
 
-// cx-login a {
-//   color: pink;
-//   font-weight: 900;
-//   background-color: var(--cx-color-warning);
-// }
+cx-login a {
+  color: #FFF;
+}
 
 // default CSS approach to overwrite root var
 
