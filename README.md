@@ -2,6 +2,22 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.18.
 
+## Spartacus
+
+### Validating the Back end
+
+* Use a web browser (Chrome is highly recommended) to access the CMS OCC endpoint of your back end.
+
+  The default is available at: {server-base-url}/rest/v2/electronics/cms/pages.
+
+  For example, with a back end instance running from https://localhost:9002, you would access: https://localhost:9002/rest/v2/electronics/cms/pages.
+
+  Note: SAP Commerce cloud 2005 and above needs to use the occ prefix /occ/v2/. Anything below will be be using the default value of /rest/v2/.
+
+* Accept the security exception in your browser if you are running a development instance with a self-signed HTTPS certificate.
+
+When the request works, you see an XML response in your browser.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
