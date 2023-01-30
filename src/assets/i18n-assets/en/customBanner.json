@@ -1,0 +1,10 @@
+{
+  "customBanner": {
+    "label": "Search here..."
+  },
+  "customCommon": {
+    "customBanner": {
+      "label": "Custom"
+    }
+  }
+}

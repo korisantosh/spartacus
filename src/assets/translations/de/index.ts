@@ -1,0 +1,7 @@
+import { common } from './common';
+import { customCommon } from './customCommon';
+
+export const de = {
+  common,
+  customCommon,
+};
