@@ -1,0 +1,18 @@
+.nav-breadcrumbs {
+  font-size: 0.85rem;
+  padding: 10px 5px;
+  display: flex;
+  justify-content: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  span {
+    a {
+      text-transform: capitalize;
+      padding: 5px 5px;
+    }
+    &:not(:last-child):after {
+      content: "/";
+    }
+  }
+}

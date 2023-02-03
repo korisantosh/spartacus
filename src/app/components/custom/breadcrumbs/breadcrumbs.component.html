@@ -1,0 +1,5 @@
+<nav class="nav-breadcrumbs">
+  <span *ngFor="let crumb of crumbs$ | async">
+    <a [routerLink]="crumb.link" [innerHTML]="crumb.label"></a>
+  </span>
+</nav>
