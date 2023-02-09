@@ -64,7 +64,6 @@ base.properties
 **/messages/addons
 *_bof.jar
 *.DS_Store
-olm-jira.php
 .history/
 #**/*.classpath
 #**/*.project
