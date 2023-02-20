@@ -1,0 +1,30 @@
+<ng-container *ngIf="product$ | async as product">
+  <ng-container *ngIf="userLoggedIn$ | async; else loginPrompt">
+
+    <ng-container *ngIf="wishListEntries$ | async as entries">
+     <!-- <ng-container *ngIf="hasStock">-->
+        <ng-container *ngIf="getProductInWishList(product, entries) as entry; else addItem">
+          <a href="javascript://"
+            class="btn btn-primary"
+            (click)="remove(entry)">
+            <span class="button-text">Remove Wishlist</span>
+          </a>
+        </ng-container>
+        <ng-template #addItem>
+          <a href="javascript://"
+            class="btn btn-primary"
+            (click)="add(product)">
+            <span class="button-text">Add To WishList</span>
+          </a>
+        </ng-template>
+      <!--</ng-container>-->
+    </ng-container>
+  </ng-container>
+</ng-container>
+
+<ng-template #loginPrompt>
+    <a class="btn btn-primary"
+      href="login">
+      <span class="button-text">Sign in to add to wish list</span>
+    </a>
+</ng-template>

@@ -1,0 +1,19 @@
+<!-- If we are using the Template-Driven Outlets then we need to use as shown example below -->
+
+<!-- <ng-template cxOutletRef="Section3" [cxOutletPos]="outletPosition.BEFORE">
+  <h1>Hot SALE</h1>
+  <cx-product-list-item
+    *ngIf="hotProduct$ | async as product"
+    [product]="product"
+  >
+  </cx-product-list-item>
+</ng-template> -->
+
+<!-- If we are using Component-Driven Outlets then we need to define like this without the template -->
+
+<cx-product-list-item
+  *ngIf="hotProduct$ | async as product"
+  [product]="product"
+  class="custom-outlet"
+>
+</cx-product-list-item>
