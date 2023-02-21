@@ -10,6 +10,7 @@ import { InputCounterComponent } from './input-counter/input-counter.component';
 import { CartItemComponent } from './cart-item/cart-item.component';
 import { AddToWishlistComponent } from './add-to-wishlist/add-to-wishlist.component';
 import { BlankComponent } from './blank/blank.component';
+import { PromotionsComponent } from './promotions/promotions.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { BlankComponent } from './blank/blank.component';
     InputCounterComponent,
     CartItemComponent,
     AddToWishlistComponent,
-    BlankComponent
+    BlankComponent,
+    PromotionsComponent
   ],
   imports: [
     CommonModule,
