@@ -1,1 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
+
+$styleVersion: 4.3;
+@import "~@spartacus/styles/index";
+
+$primary: #313237;
+$accordion-background: #f5f5f5;
+
+//media queries
+$mobile: 767px;
+$tablet: 1024px;
+$desktop: 1200px;
+
+cx-tab-paragraph-container {
+  max-width: calc(100% - 100px);
+  border-top: 4px solid $primary;
+  margin-bottom: 50px;
+  background: $accordion-background;
+  padding-top: 15px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+  @media screen and (min-width: $mobile) {
+    max-width: 1200px;
+  }
+
+  .header {
+    border-radius: 0;
+  }
+
+  div.active,
+  div {
+    background: $accordion-background;
+    border-top: none;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  button,
+  button.active {
+    color: $primary;
+    font-weight: 600;
+    background: $accordion-background;
+
+    &:after {
+      background-color: $primary;
+      border-radius: 10px;
+      margin-top: 5px;
+    }
+  }
+}
