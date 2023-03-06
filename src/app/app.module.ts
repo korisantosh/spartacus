@@ -6,10 +6,15 @@ import { StoreModule } from "@ngrx/store";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SpartacusModule } from './spartacus/spartacus.module';
+import { ProductImageZoomModule } from '@spartacus/product/image-zoom/components';
+import { CmsConfig, ConfigModule, UrlModule } from '@spartacus/core';
+import { CustomProductImagesComponent } from './custom-product-images/custom-product-images.component';
+import { CarouselModule, MediaModule } from '@spartacus/storefront';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CustomProductImagesComponent
   ],
   imports: [
     BrowserModule,
@@ -17,7 +22,18 @@ import { SpartacusModule } from './spartacus/spartacus.module';
     AppRoutingModule,
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
-    SpartacusModule
+    SpartacusModule,
+    ProductImageZoomModule,
+    CarouselModule,
+    MediaModule,
+    UrlModule,
+    ConfigModule.withConfig({
+      cmsComponents: {
+        ProductImagesComponent: {
+          component: CustomProductImagesComponent,
+        },
+      },
+    } as CmsConfig),
   ],
   providers: [],
   bootstrap: [AppComponent]
