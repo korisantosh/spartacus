@@ -1,0 +1,71 @@
+.top-header {
+  background-color: var(--cx-color-secondary);
+  font-size: 0.875rem;
+}
+
+.header-icons {
+  display: flex;
+  gap: 2rem;
+}
+
+.SiteLinks {
+  // this is a trick to pass a margin parameter to child cx-link components
+  // which are dynamically rendered in the slot
+  --cx-margin: 0.5rem 8px;
+}
+
+cx-site-context-selector {
+    color: var(--cx-color-primary);
+    margin-top: 0;
+    margin-bottom: 0;
+    select {
+      background: none;
+    }
+}
+// mini cart component styles
+// remove default component styles first: `$skipComponentStyles: (cx-minicart);`
+cx-mini-cart {
+    margin-right: 1rem;
+    position: relative;
+
+    a {
+        color: initial;
+    }
+
+    .total {
+        display: none;
+    }
+
+    .count {
+        padding: 0 0.25rem;
+        position: absolute;
+        top: -0.5rem;
+    }
+}
+
+// searchbox component styles
+
+cx-searchbox {
+    border-bottom: 2px solid var(--cx-color-primary);
+    color: var(--cx-color-primary);
+    margin-bottom: 0.25rem;
+
+    label {
+        padding: unset;
+        width: unset;
+
+        div.search-icon {
+            align-self: center;
+            flex-basis: unset;
+            padding: unset;
+        }
+
+        input {
+            height: unset;
+        }
+    }
+
+    & > * {
+        background-color: unset;
+    }
+}

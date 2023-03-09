@@ -1,4 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+//change the default font
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900&display=swap&subset=latin-ext");
 
-$styleVersion: 4.3;
-@import '~@spartacus/styles/index';
+$font-family-base: "Raleway", sans-serif;
+// remove default styles for the header section and some components
+$skipComponentStyles: (header, cx-mini-cart);
+
+@import "~@spartacus/styles/index";
+
+// define color variables
+
+:root {
+    --cx-color-secondary: #F1F2F3;
+    --cx-color-primary: #43464E;
+}
+
+// limits the number of top level navigation nodes
+
+cx-navigation-ui > nav:nth-of-type(n + 4) {
+  display: none;
+}
