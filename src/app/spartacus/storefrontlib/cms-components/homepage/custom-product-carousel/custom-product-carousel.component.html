@@ -1,0 +1,38 @@
+<cx-carousel
+  [items]="items$ | async"
+  [title]="title$ | async"
+  [template]="carouselItem"
+  itemWidth="285px"
+>
+</cx-carousel>
+
+<!-- For custom implementation -->
+
+<!-- <app-custom-carousel
+  [items]="items$ | async"
+  [title]="title$ | async"
+  [template]="carouselItem"
+  itemWidth="285px"
+>
+</app-custom-carousel> -->
+
+<ng-template #carouselItem let-item="item">
+  <a
+    class="custom-carousel-section"
+    tabindex="0"
+    [routerLink]="{ cxRoute: 'product', params: item } | cxUrl"
+  >
+    <cx-media
+      class="custom-carousel-section__container"
+      [container]="item.images?.PRIMARY"
+      format="product"
+      [alt]="item.name"
+    ></cx-media>
+    <h3 class="">
+      {{ item.name }}
+    </h3>
+    <div class="price">
+      {{ item.price?.formattedValue }}
+    </div>
+  </a>
+</ng-template>

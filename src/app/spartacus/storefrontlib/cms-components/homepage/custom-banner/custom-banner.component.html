@@ -1,0 +1,34 @@
+<ng-container *ngIf="data$ | async as data">
+  <div
+    *ngIf="data.uid == 'ElectronicsHompageSplashBannerComponent'"
+    class="homepage-test-banner"
+  >
+    <a href="{{ data.urlLink }}">
+      <picture>
+        <source
+          media="(max-width: 767.98px)"
+          type="{{ data.media.mobile.mime }}"
+          srcset="https://spartacus-demo.eastus.cloudapp.azure.com:8443{{data.media.mobile.url}}"
+          sizes="100vw"
+        />
+        <source
+          media="(min-width: 768px) and (max-width:1024px)"
+          type="{{ data.media.tablet.mime }}"
+          srcset="https://spartacus-demo.eastus.cloudapp.azure.com:8443{{data.media.tablet.url}}"
+          sizes="100vw"
+        />
+        <img
+          src="https://spartacus-demo.eastus.cloudapp.azure.com:8443{{ data.media.desktop.url }}"
+          loading="lazy"
+          alt="{{ data.name }}"
+        />
+      </picture>
+    </a>
+  </div>
+  <div
+    *ngIf="data.uid != 'ElectronicsHompageSplashBannerComponent'"
+    class="test-banner"
+  >
+    <cx-media [container]="$any(data.media)" [alt]="$any(data.name)"></cx-media>
+  </div>
+</ng-container>
