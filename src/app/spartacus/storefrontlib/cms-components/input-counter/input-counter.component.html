@@ -1,0 +1,34 @@
+<div class="input-counter">
+<button
+  type="button"
+  class="input-counter__minus"
+  (click)="decrement()"
+  [disabled]="control.disabled || control.value <= min"
+  [tabindex]="control.disabled || control.value <= min ? -1 : 0"
+  attr.aria-label="Remove One"
+>
+  -
+</button>
+<input
+  #qty
+  type="number"
+  class="input-counter__qty"
+  [min]="min"
+  [max]="max"
+  [step]="step"
+  [readonly]="readonly"
+  [tabindex]="readonly ? -1 : 0"
+  [formControl]="control"
+  value="1"
+  attr.aria-label="quantity"
+/>
+<button
+  type="button"
+  class="input-counter__plus"
+  (click)="increment()"
+  [disabled]="control.disabled || control.value >= max"
+  tabindex="0"
+  attr.aria-label="Add One More">
+  +
+</button>
+</div>

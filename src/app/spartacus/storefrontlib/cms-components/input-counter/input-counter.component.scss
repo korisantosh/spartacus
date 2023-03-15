@@ -1,0 +1,45 @@
+
+.input-counter {
+  display: inline-block;
+  margin-bottom: 20px;
+  &__qty {
+    width: 100px;
+    text-align: center;
+    border: 1px solid #222;
+    padding: 5px;
+    vertical-align: middle;
+    height: 40px;
+  }
+  &__minus {
+    text-align: center;
+    border: 1px solid #bbb;
+    padding: 0;
+    color: #aaa;
+    font-size: 24px;
+    vertical-align: middle;
+    height: 40px;
+    width: 28px;
+  }
+  &__plus {
+    text-align: center;
+    border: 1px solid #222;
+    padding: 0;
+    background: #222;
+    color: #fff;
+    font-size: 24px;
+    vertical-align: middle;
+    height: 40px;
+    width: 28px;
+  }
+}
+/* Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

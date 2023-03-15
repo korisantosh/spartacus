@@ -1,0 +1,119 @@
+<div #dialog>
+
+  <!-- Modal Header -->
+
+  <ng-container *ngIf="(loaded$ | async) || modalIsOpen; else loading">
+    <div class="cx-dialog-header modal-header">
+      <div
+        class="cx-dialog-title modal-title"
+        aria-live="polite"
+        aria-atomic="true"
+      >
+        {{
+          (addedEntryWasMerged$ | async)
+            ? 'items Incremented In Your Cart'
+            : 'Added To Cart'
+        }}
+      </div>
+      <button
+        type="button"
+        class="close"
+        attr.aria-label="Close Modal"
+        cxModal="dismiss"
+        cxModalReason="Cross click"
+      >
+        <span aria-hidden="true">
+          X
+        </span>
+      </button>
+    </div>
+    <!-- Modal Body -->
+
+    <div class="cx-dialog-body modal-body" *ngIf="entry$ | async as entry">
+
+      <div class="cx-dialog-row">
+        <div class="cx-dialog-item col-sm-12">
+          <app-cart-item
+            [item]="entry"
+            [compact]="true"
+            [quantityControl]="getQuantityControl() | async"
+            [promotionLocation]="promotionLocation"
+          ></app-cart-item>
+        </div>
+        <!-- Separator -->
+        <div
+          class="cx-dialog-separator col-sm-12 d-xs-block d-sm-block d-md-none"
+        ></div>
+        <!-- Total container -->
+        <div
+          class="cx-dialog-actions col-sm-12"
+          *ngIf="cart$ | async as cart"
+        >
+          <div class="cx-dialog-total">
+            <div> Total Cart {{ cart.deliveryItemsQuantity }} </div>
+
+            <div> {{ cart.subTotal.formattedValue }} </div><!---->
+          </div>
+
+          <!-- Promotions -->
+          <div class="cx-dialog-promotions">
+            <app-promotions
+              [promotions]="
+                (cart.appliedOrderPromotions || []).concat(
+                  cart.potentialOrderPromotions || []
+                )
+              "
+            ></app-promotions>
+          </div>
+
+          <!-- Actions -->
+          <div class="cx-dialog-buttons">
+            <a
+              href="cart"
+              cxModal="dismiss"
+              cxModalReason="View Cart click"
+              class="btn btn-primary"
+              autofocus
+              >View Cart</a
+            >
+            <a
+              href="checkout"
+              cxModal="dismiss"
+              cxModalReason="Proceed To Checkout click"
+              class="btn btn-secondary"
+              >Proceed To Checkout</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-template #loading>
+    <div class="cx-dialog-header modal-header">
+      <div class="cx-dialog-title modal-title">
+        Cart Updating
+      </div>
+      <button
+        type="button"
+        class="close"
+        cxModal="dismiss"
+        cxModalReason="Cross click"
+      >
+        <span aria-hidden="true">
+          <span class="icon-close"></span>
+        </span>
+      </button>
+    </div>
+    <!-- Modal Body -->
+    <div class="cx-dialog-body modal-body">
+      <div class="cx-dialog-row">
+        <div class="col-sm-12">
+          <div class="loader-container">
+            <div class="loader">Loading</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</div>

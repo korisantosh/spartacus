@@ -1,0 +1,15 @@
+<ng-container *ngIf="product$ | async as product">
+  <div class="pdp-intro">
+      <h1 class="pdp-intro__title">{{product.name}}</h1>
+      <p class="pdp-intro__summary" [innerHTML]="product.summary"></p>
+      <div class="pdp-intro__price">{{product.price.formattedValue}}</div>
+      <div class="row">
+        <div class="col pdp-intro__discount">-10% Hard code</div>
+        <div class="col"><span class="pdp-intro__inStock">{{product.stock.stockLevelStatus}}</span></div>
+      </div>
+      <p class="pdp-intro__sku">SKU # {{product.code}}</p>
+      <div class="pdp-intro__rating">
+        <cx-star-rating [rating] = "product.averageRating" [disabled] = "true"> </cx-star-rating>
+      </div>
+  </div>
+</ng-container>

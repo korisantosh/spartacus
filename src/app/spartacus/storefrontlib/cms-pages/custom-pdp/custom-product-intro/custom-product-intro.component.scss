@@ -1,0 +1,27 @@
+.pdp-intro {
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  &__sku {
+    font-weight: 600;
+  }
+  &__price {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  &__discount {
+    color: green;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  &__inStock {
+    background: #eee;
+    padding: 10px 15px;
+    border-radius: 33%;
+    font-size: 13px;
+    font-weight: 700;
+    float: right;
+  }
+}

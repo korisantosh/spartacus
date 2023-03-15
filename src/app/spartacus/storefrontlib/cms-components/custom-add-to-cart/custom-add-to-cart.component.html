@@ -1,0 +1,20 @@
+<form *ngIf="productCode" [formGroup]="addToCartForm" (submit)="addToCart()">
+  <div class="quantity" *ngIf="showQuantity">
+    <label>Quantity</label>
+    <app-input-counter
+      [max]="maxQuantity"
+      [control]="$any(addToCartForm).get('quantity')"
+    ></app-input-counter>
+  </div>
+<app-add-to-wishlist></app-add-to-wishlist>
+  <button *ngIf="hasStock"
+    class="btn btn-primary add-to-cart-btn"
+    type="submit"
+    [disabled]="quantity <= 0 || quantity > maxQuantity">
+    Add To Cart
+  </button>
+  <span *ngIf="!hasStock"
+  class="btn btn-primary add-to-cart-btn">
+    Out Of Stock
+  </span>
+</form>
