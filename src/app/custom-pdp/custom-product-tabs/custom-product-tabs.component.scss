@@ -1,0 +1,65 @@
+$primary: #313237;
+$accordion-background: #f5f5f5;
+
+//media queries
+$mobile: 767px;
+$tablet: 1024px;
+$desktop: 1200px;
+
+.custom-tab-content {
+  display: none;
+}
+
+.custom-tab-content.active {
+  display: block;
+}
+
+.custom-tab-container {
+  width: calc(100% - 70px);
+  max-width: 1140px;
+  border-top: 4px solid $primary;
+  margin-bottom: 50px;
+  background: $accordion-background;
+  padding: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.custom-tab-button {
+  position: relative;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 0px 10px 0;
+  margin-bottom: 20px;
+  margin-left: 25px;
+
+  &:first-child {
+    margin-left: 30px;
+  }
+
+  &.active {
+    &:after {
+      content: "";
+      position: absolute;
+      height: 4px;
+      background-color: $primary;
+      border-radius: 10px;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .custom-tab-button {
+    width: 100%;
+    margin-left: 0;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
