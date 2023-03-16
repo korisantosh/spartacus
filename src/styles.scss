@@ -1,6 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
 $styleVersion: 4.3;
+
+//media queries
+$mobile: 767px;
+$tablet: 1024px;
+$desktop: 1200px;
+
 @import '~@spartacus/styles/index';
 @import '~@spartacus/styles/scss/theme/santorini';
 
@@ -10,49 +16,4 @@ app-custom-product-introduction {
   height: max-content;
 }
 
-app-custom-product-images cx-carousel .carousel-panel .slides .slide .item img {
-  margin: 15px auto;
-}
-
-app-custom-product-images cx-carousel .carousel-panel .slides .slide {
-  display: block !important;
-}
-
-app-custom-product-images cx-carousel .carousel-panel .slides {
-  margin: 25px 0px;
-}
-
-app-custom-product-images cx-carousel .fa-angle-left:before {
-  content: "\f107";
-}
-
-app-custom-product-images cx-carousel .fa-angle-right:before {
-  content: "\f106";
-}
-
-app-custom-product-images cx-carousel .previous {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-app-custom-product-images cx-carousel .next {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-app-custom-product-images cx-product-image-zoom-thumbnails .carousel-panel .slide.active {
-  display: flex !important;
-}
-
-app-custom-product-images cx-product-image-zoom-thumbnails .carousel-panel .slides,
-app-custom-product-images cx-product-image-zoom-thumbnails .carousel-panel .slides .slide .item img {
-  margin: 0 !important;
-}
-
-app-custom-product-images cx-product-image-zoom-thumbnails .carousel-panel .slides .slide .item img {
-  padding-right: 5px !important;
-}
+@import './styles/spartacus/pdp-zoomimages.scss';
