@@ -13,6 +13,7 @@ import { AddToWishlistComponent } from './add-to-wishlist/add-to-wishlist.compon
 import { BlankComponent } from './blank/blank.component';
 import { PromotionsComponent } from './promotions/promotions.component';
 
+// PDP thumbs zoom gallery
 import { ProductDetailPageModule } from './product-detail-page/product-detail-page.module';
 
 @NgModule({
