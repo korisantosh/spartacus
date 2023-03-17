@@ -3,16 +3,28 @@ import { CommonModule } from '@angular/common';
 import { CustomProductSummaryComponent } from './custom-product-summary/custom-product-summary.component';
 import { CustomProductIntroductionComponent } from './custom-product-introduction/custom-product-introduction.component';
 import { CustomProductImagesComponent } from './custom-product-images/custom-product-images.component';
-import { CarouselModule, MediaModule, StarRatingModule } from '@spartacus/storefront';
-import { CmsConfig, ConfigModule, UrlModule } from '@spartacus/core';
+import {
+  CarouselModule,
+  MediaModule,
+  OutletModule,
+  PageComponentModule,
+  StarRatingModule,
+} from '@spartacus/storefront';
+import {
+  CmsConfig,
+  ConfigModule,
+  I18nModule,
+  UrlModule,
+} from '@spartacus/core';
 import { ProductImageZoomModule } from '@spartacus/product/image-zoom/components';
-
+import { CustomPdpProductTabsComponent } from './custom-pdp-product-tabs/custom-pdp-product-tabs.component';
 
 @NgModule({
   declarations: [
     CustomProductSummaryComponent,
     CustomProductIntroductionComponent,
-    CustomProductImagesComponent
+    CustomProductImagesComponent,
+    CustomPdpProductTabsComponent,
   ],
   imports: [
     CommonModule,
@@ -21,6 +33,9 @@ import { ProductImageZoomModule } from '@spartacus/product/image-zoom/components
     MediaModule,
     UrlModule,
     ProductImageZoomModule,
+    PageComponentModule,
+    OutletModule,
+    I18nModule,
     ConfigModule.withConfig({
       cmsComponents: {
         ProductImagesComponent: {
@@ -28,6 +43,9 @@ import { ProductImageZoomModule } from '@spartacus/product/image-zoom/components
         },
         ProductIntroComponent: {
           component: CustomProductIntroductionComponent,
+        },
+        CMSTabParagraphContainer: {
+          component: CustomPdpProductTabsComponent,
         },
         // ProductSummaryComponent: {
         //   component: CustomProductSummaryComponent,
@@ -41,4 +59,4 @@ import { ProductImageZoomModule } from '@spartacus/product/image-zoom/components
     CustomProductImagesComponent,
   ],
 })
-export class ProductDetailPageModule { }
+export class ProductDetailPageModule {}
