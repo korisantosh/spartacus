@@ -10,12 +10,14 @@ import {
   provideOutlet,
 } from '@spartacus/storefront';
 import { CustomCarouselComponent } from './custom-carousel/custom-carousel.component';
+import { HeaderComponent } from 'src/app/spartacus/storefrontlib/cms-components/custom-navigation/header/header.component';
 
 @NgModule({
   declarations: [
     CustomOutletsComponent,
     CustomBannerComponent,
     CustomCarouselComponent,
+    HeaderComponent
   ],
   imports: [
     CommonModule,
@@ -34,6 +36,7 @@ import { CustomCarouselComponent } from './custom-carousel/custom-carousel.compo
     CustomBannerComponent,
     CustomOutletsComponent,
     CustomCarouselComponent,
+    HeaderComponent
   ],
 })
 export class CmsComponentsModule {}

@@ -44,6 +44,12 @@ export interface CmsParagraphComponent extends CmsComponent {
   title?: string;
 }
 
+export interface NavigationComponent extends CmsComponent {
+  content?: string;
+  container?: string;
+  title?: string;
+}
+
 export interface CMSTabParagraphContainer extends CmsComponent {
   container?: string;
   components?: string;
