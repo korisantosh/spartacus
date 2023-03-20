@@ -10,23 +10,31 @@ import { LayoutConfig } from '@spartacus/storefront';
     ConfigModule.withConfig({
       layoutSlots: {
         header: {
-          lg: {
-            slots: [
-              'PreHeader',
-              'SiteContext',
-              'SiteLinks',
-              'SiteLogo',
-              'SearchBox',
-              'SiteLogin',
-              'MiniCart',
-              'NavigationBar',
-            ],
-          },
-          slots: ['PreHeader', 'SiteLogo', 'SearchBox', 'MiniCart'],
+          // lg: {
+          //   slots: [
+          //     'SiteContext',
+          //     'SiteLinks'
+          //   ],
+          //   hidden : true,
+          // },
+          slots: [
+            'PreHeader',
+            'SiteLogo',
+            'SearchBox',
+            'MiniCart'],
         },
         navigation: {
-          lg: { slots: [] },
-          slots: ['SiteLogin', 'NavigationBar', 'SiteContext', 'SiteLinks'],
+          // lg: {
+          //   slots: [
+          //     'SiteContext',
+          //     'SiteLinks'
+          //   ],
+          //   hidden : true,
+          // },
+          slots: [
+            'SiteLogin',
+            'NavigationBar',
+          ],
         },
         footer: {
           slots: ['Footer'],

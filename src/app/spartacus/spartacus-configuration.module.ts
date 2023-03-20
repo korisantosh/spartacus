@@ -5,7 +5,7 @@ import {
   I18nConfig,
   OccConfig,
   provideConfig,
-  SiteContextConfig,
+  // SiteContextConfig,
 } from '@spartacus/core';
 import {
   defaultCmsContentProviders,
@@ -27,15 +27,15 @@ import {
         },
       },
     }),
-    provideConfig(<SiteContextConfig>{
-      context: {
-        currency: ['USD', 'GBP'],
-        language: ['en'],
-        urlParameters: ['baseSite', 'language', 'currency'],
-        baseSite: ['electronics-spa', 'powertools-spa', 'apparel-uk-spa'],
-        theme: ['santorini'],
-      },
-    }),
+    // provideConfig(<SiteContextConfig>{
+    //   context: {
+    //     currency: ['USD', 'GBP'],
+    //     language: ['en'],
+    //     urlParameters: ['baseSite', 'language', 'currency'],
+    //     baseSite: ['electronics-spa', 'powertools-spa', 'apparel-uk-spa'],
+    //     theme: ['santorini'],
+    //   },
+    // }),
     provideConfig(<I18nConfig>{
       i18n: {
         resources: translations,

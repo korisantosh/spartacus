@@ -1,8 +1,106 @@
 /* You can add global styles to this file, and also import other style files */
-
+$skipComponentStyles: (cx-searchbox, cx-mini-cart);
 $styleVersion: 4.3;
 @import '~@spartacus/styles/index';
-@import '~@spartacus/styles/scss/theme/santorini';
+//@import '~@spartacus/styles/scss/theme/santorini';
+
+:root {
+  --cx-color-dark: #3e3939;
+  --cx-color-primary: #554747;
+  --cx-color-secondary: #2c2f47;
+}
+
+header {
+
+  @media screen and (min-width: 992px) {
+    background: #3e3939;
+  }
+
+  cx-navigation-ui{
+    &.flyout {
+      a {
+        &:hover {
+          color: #ffffff
+        }
+      }
+      span {
+        &:hover {
+          color: #ffffff;
+        }
+      }
+    }
+
+  }
+
+  .SiteLogo {
+      width: 200px;
+
+      img {
+          max-width: 100%;
+      }
+  }
+
+  .SearchBox {
+    margin: 10px 55px 0;
+    flex: 1;
+
+    label {
+      position: relative;
+
+      button.reset,
+      button.search {
+        display: none;
+      }
+
+      input {
+        border-radius: 12px;
+        box-shadow: none;
+        outline: 0;
+        border: none;
+        padding: 10px 10px 10px 32px;
+        width: 70%;
+      }
+
+      .search-icon {
+        position: absolute;
+        top: 13px;
+        color: #3e3939;
+        left: 10px;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .SiteLogin {
+    padding: 0;
+
+
+
+  a {
+    color: #ffffff;
+
+    &:hover {
+      color: #fefefe;
+    }
+  }
+  }
+
+  .MiniCart {
+    padding-left: 20px;
+    img {
+      max-width: 25px;
+    }
+  }
+
+  .SiteContext::after {
+    display: none;
+  }
+
+  .SiteLinks {
+    visibility: hidden;
+  }
+
+}
 
 // Style for product images component - pdp page
 

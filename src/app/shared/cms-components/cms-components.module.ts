@@ -15,8 +15,7 @@ import { CustomCarouselComponent } from './custom-carousel/custom-carousel.compo
   declarations: [
     CustomOutletsComponent,
     CustomBannerComponent,
-    CustomCarouselComponent,
-  ],
+    CustomCarouselComponent  ],
   imports: [
     CommonModule,
     IconModule,

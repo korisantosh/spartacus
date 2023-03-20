@@ -6,6 +6,7 @@ import { GenericLinkModule, MediaModule } from '@spartacus/storefront';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { FooterNavigationComponent } from './footer-navigation/footer-navigation.component';
 import { FooterCopyrightComponent } from './footer-copyright/footer-copyright.component';
+import { HeaderModule } from './header/header.module';
 
 
 
@@ -13,7 +14,7 @@ import { FooterCopyrightComponent } from './footer-copyright/footer-copyright.co
   declarations: [
     BreadcrumbsComponent,
     FooterNavigationComponent,
-    FooterCopyrightComponent
+    FooterCopyrightComponent,
   ],
   imports: [
     CommonModule,
@@ -22,6 +23,7 @@ import { FooterCopyrightComponent } from './footer-copyright/footer-copyright.co
     MediaModule,
     GenericLinkModule,
     // NavigationModule,
+    HeaderModule,
     ConfigModule.withConfig({
       cmsComponents: {
         BreadcrumbComponent: {
