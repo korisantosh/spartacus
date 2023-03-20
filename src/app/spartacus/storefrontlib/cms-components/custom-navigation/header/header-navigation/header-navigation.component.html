@@ -1,0 +1,6 @@
+<nav *ngIf="(node$ | async) as node">
+    <cx-navigation-ui
+      *ngFor="let child of node?.children"
+      [node]="child"
+    ></cx-navigation-ui>
+  </nav>

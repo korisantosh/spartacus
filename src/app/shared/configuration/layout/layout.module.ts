@@ -14,12 +14,12 @@ import { LayoutConfig } from '@spartacus/storefront';
             slots: [
               'PreHeader',
               'SiteContext',
+              'NavigationBar',
               'SiteLinks',
               'SiteLogo',
               'SearchBox',
               'SiteLogin',
               'MiniCart',
-              'NavigationBar',
             ],
           },
           slots: ['PreHeader', 'SiteLogo', 'SearchBox', 'MiniCart'],

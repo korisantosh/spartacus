@@ -6,7 +6,7 @@ import { GenericLinkModule, MediaModule } from '@spartacus/storefront';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { FooterNavigationComponent } from './footer-navigation/footer-navigation.component';
 import { FooterCopyrightComponent } from './footer-copyright/footer-copyright.component';
-import { HeaderComponent } from './header/header.component';
+import { HeaderModule } from './header/header.module';
 
 
 
@@ -15,7 +15,6 @@ import { HeaderComponent } from './header/header.component';
     BreadcrumbsComponent,
     FooterNavigationComponent,
     FooterCopyrightComponent,
-    HeaderComponent
   ],
   imports: [
     CommonModule,
@@ -24,6 +23,7 @@ import { HeaderComponent } from './header/header.component';
     MediaModule,
     GenericLinkModule,
     // NavigationModule,
+    HeaderModule,
     ConfigModule.withConfig({
       cmsComponents: {
         BreadcrumbComponent: {
@@ -35,12 +35,9 @@ import { HeaderComponent } from './header/header.component';
         // FooterNavigationComponent: {
         //   component: FooterNavigationComponent,
         // }
-        NavigationComponent: {
-          component: HeaderComponent,
-        },
       },
     } as CmsConfig),
   ],
-  exports: [BreadcrumbsComponent, FooterCopyrightComponent, FooterNavigationComponent, HeaderComponent],
+  exports: [BreadcrumbsComponent, FooterCopyrightComponent, FooterNavigationComponent],
 })
 export class CustomNavigationModule { }
