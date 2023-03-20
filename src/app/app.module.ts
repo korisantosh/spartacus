@@ -8,6 +8,8 @@ import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SpartacusModule } from './spartacus/spartacus.module';
+import { CommonModule } from '@angular/common';
+import { I18nModule } from '@spartacus/core';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { SpartacusModule } from './spartacus/spartacus.module';
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
     }),
-    BrowserTransferStateModule
+    BrowserTransferStateModule,
+    CommonModule,
+    I18nModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

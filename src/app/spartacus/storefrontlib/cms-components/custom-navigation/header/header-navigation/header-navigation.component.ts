@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoryNavigationComponent, NavigationComponent } from '@spartacus/storefront';
+import { NavigationComponent } from '@spartacus/storefront';
 
 @Component({
   selector: 'app-header-navigation',

@@ -25,9 +25,9 @@ export interface CmsLinkComponent extends CmsComponent {
   target?: string | boolean;
   styleAttributes?: string;
 }
-export interface CmsSiteContextSelectorComponent extends CmsComponent {
-  context?: string;
-}
+// export interface CmsSiteContextSelectorComponent extends CmsComponent {
+//   context?: string;
+// }
 export interface CmsSearchBoxComponent extends CmsComponent {
   container?: boolean;
   maxSuggestions?: number;
