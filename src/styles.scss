@@ -3,6 +3,7 @@ $skipComponentStyles: (cx-searchbox, cx-mini-cart);
 $styleVersion: 4.3;
 @import '~@spartacus/styles/index';
 //@import '~@spartacus/styles/scss/theme/santorini';
+@import '~@spartacus/styles/scss/components/product/search/_searchbox';
 
 :root {
   --cx-color-dark: #3e3939;
