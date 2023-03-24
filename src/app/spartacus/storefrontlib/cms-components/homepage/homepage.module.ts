@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CustomBannerComponent } from './custom-banner/custom-banner.component';
+import { HomeBannerComponent } from './custom-banner/home-banner.component';
 import { CustomProductCarouselComponent } from './custom-product-carousel/custom-product-carousel.component';
 import { CmsConfig, ConfigModule, UrlModule } from '@spartacus/core';
 import {
@@ -16,7 +16,7 @@ import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
-    CustomBannerComponent,
+    HomeBannerComponent,
     CustomProductCarouselComponent
   ],
   imports: [
@@ -31,10 +31,10 @@ import { RouterModule } from '@angular/router';
       cmsComponents: {
         ProductCarouselComponent: {
           selector: CustomProductCarouselComponent,
-        },
-        SimpleResponsiveBannerComponent: {
-          component: CustomBannerComponent,
-        },
+        }
+        , SimpleResponsiveBannerComponent: {
+          component: HomeBannerComponent,
+        }
       },
     } as CmsConfig),
 
@@ -42,6 +42,6 @@ import { RouterModule } from '@angular/router';
       imageLoadingStrategy: ImageLoadingStrategy.LAZY,
     } as MediaConfig),
   ],
-  exports: [CustomBannerComponent, CustomProductCarouselComponent],
+  exports: [HomeBannerComponent, CustomProductCarouselComponent],
 })
 export class HomepageModule { }
