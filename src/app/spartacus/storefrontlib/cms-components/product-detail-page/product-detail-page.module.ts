@@ -29,9 +29,9 @@ import { ProductImageZoomModule } from '@spartacus/product/image-zoom/components
         ProductIntroComponent: {
           component: CustomProductIntroductionComponent,
         },
-        // ProductSummaryComponent: {
-        //   component: CustomProductSummaryComponent,
-        // },
+        ProductSummaryComponent: {
+          component: CustomProductSummaryComponent,
+        },
       },
     } as CmsConfig),
   ],
