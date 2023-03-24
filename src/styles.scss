@@ -1,9 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-$skipComponentStyles: (cx-searchbox, cx-mini-cart);
+$skipComponentStyles: (cx-mini-cart);
+// $skipComponentStyles: (cx-searchbox, cx-mini-cart);
 $styleVersion: 4.3;
 @import '~@spartacus/styles/index';
 //@import '~@spartacus/styles/scss/theme/santorini';
-@import '~@spartacus/styles/scss/components/product/search/_searchbox';
+@import './styles/spartacus/custom-header.scss';
 
 :root {
   --cx-color-dark: #3e3939;
@@ -39,37 +40,6 @@ header {
       img {
           max-width: 100%;
       }
-  }
-
-  .SearchBox {
-    margin: 10px 55px 0;
-    flex: 1;
-
-    label {
-      position: relative;
-
-      button.reset,
-      button.search {
-        display: none;
-      }
-
-      input {
-        border-radius: 12px;
-        box-shadow: none;
-        outline: 0;
-        border: none;
-        padding: 10px 10px 10px 32px;
-        width: 70%;
-      }
-
-      .search-icon {
-        position: absolute;
-        top: 13px;
-        color: #3e3939;
-        left: 10px;
-        font-size: 12px;
-      }
-    }
   }
 
   .SiteLogin {

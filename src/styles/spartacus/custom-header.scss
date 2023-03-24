@@ -1,0 +1,75 @@
+@media (min-width: 768px) {
+    cx-searchbox > * {
+      background-color: #FFF;
+      color: #000;
+    }
+  }
+
+  .SearchBox {
+    margin: 10px 55px 0;
+    flex: 1;
+
+    label {
+      position: relative;
+
+      button.reset,
+      button.search {
+        display: none;
+      }
+
+      input {
+        border-radius: 12px;
+        box-shadow: none;
+        outline: 0;
+        border: none;
+        padding: 10px 10px 10px 32px;
+        width: 70%;
+      }
+
+      .search-icon {
+        position: absolute;
+        top: 10px;
+        color: #3e3939;
+        left: 10px;
+        font-size: 12px;
+      }
+
+      ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: #CCC;
+        opacity: 1; /* Firefox */
+      }
+
+      :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: #CCC;
+      }
+
+      ::-ms-input-placeholder { /* Microsoft Edge */
+        color: #CCC;
+      }
+    }
+  }
+
+label.searchbox {
+  border-radius: 18px;
+}
+
+body.searchbox-is-active.has-searchbox-results label.searchbox {
+  border-radius: 18px 18px 0 0;
+}
+
+cx-searchbox .results {
+  color: #333;
+  border-radius: 0 0 18px 18px;
+}
+
+cx-searchbox .results li:last-child a {
+  border-radius: 0 0 18px 18px;
+}
+
+.BottomHeaderSlot {
+  max-width: var(--cx-page-width-max);
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
