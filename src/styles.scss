@@ -1,7 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
-$skipComponentStyles: (cx-searchbox, cx-mini-cart);
+$skipComponentStyles: (
+  cx-searchbox,
+  cx-mini-cart
+);
 $styleVersion: 4.3;
 @import '~@spartacus/styles/index';
+@import '~font-awesome/css/font-awesome.css';
 //@import '~@spartacus/styles/scss/theme/santorini';
 
 :root {
@@ -16,13 +20,14 @@ header {
     background: #3e3939;
   }
 
-  cx-navigation-ui{
+  cx-navigation-ui {
     &.flyout {
       a {
         &:hover {
           color: #ffffff
         }
       }
+
       span {
         &:hover {
           color: #ffffff;
@@ -33,11 +38,11 @@ header {
   }
 
   .SiteLogo {
-      width: 200px;
+    width: 200px;
 
-      img {
-          max-width: 100%;
-      }
+    img {
+      max-width: 100%;
+    }
   }
 
   .SearchBox {
@@ -76,17 +81,18 @@ header {
 
 
 
-  a {
-    color: #ffffff;
+    a {
+      color: #ffffff;
 
-    &:hover {
-      color: #fefefe;
+      &:hover {
+        color: #fefefe;
+      }
     }
-  }
   }
 
   .MiniCart {
     padding-left: 20px;
+
     img {
       max-width: 25px;
     }
@@ -128,18 +134,21 @@ app-custom-product-images cx-carousel .fa-angle-right:before {
   content: "\f106";
 }
 
-app-custom-product-images cx-carousel .previous {
+app-custom-product-images cx-carousel .previous,
+app-custom-product-images cx-carousel .next {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  left: 50px;
+  right: 50px;
+  width: 40px;
+  height: 40px;
+}
+
+app-custom-product-images cx-carousel .previous {
+  bottom: -5px;
 }
 
 app-custom-product-images cx-carousel .next {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: -5px;
 }
 
 app-custom-product-images cx-product-image-zoom-thumbnails .carousel-panel .slide.active {
@@ -153,4 +162,31 @@ app-custom-product-images cx-product-image-zoom-thumbnails .carousel-panel .slid
 
 app-custom-product-images cx-product-image-zoom-thumbnails .carousel-panel .slides .slide .item img {
   padding-right: 5px !important;
+}
+
+app-custom-product-images cx-carousel .previous:not(:disabled):hover,
+app-custom-product-images cx-carousel .next:not(:disabled):hover {
+  background-color: rgb(62, 57, 57);
+  border-radius: 5px;
+}
+
+app-custom-product-images cx-carousel .next:not(:disabled):hover .fa-angle-right:before,
+app-custom-product-images cx-carousel .previous:not(:disabled):hover .fa-angle-left::before {
+  color: white;
+}
+
+
+app-custom-product-images cx-carousel .next:not(:disabled):hover .fa-angle-right,
+app-custom-product-images cx-carousel .previous:not(:disabled):hover .fa-angle-left {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+app-custom-product-images cx-carousel .next:not(:disabled):hover .fa-angle-right {
+  top: 4px;
+}
+
+app-custom-product-images cx-carousel .previous:not(:disabled):hover .fa-angle-left {
+  bottom: 4px;
 }
