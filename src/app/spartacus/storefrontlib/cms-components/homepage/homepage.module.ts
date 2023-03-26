@@ -42,6 +42,6 @@ import { RouterModule } from '@angular/router';
       imageLoadingStrategy: ImageLoadingStrategy.LAZY,
     } as MediaConfig),
   ],
-  exports: [HomeBannerComponent, CustomProductCarouselComponent],
+  exports: [CustomProductCarouselComponent],
 })
 export class HomepageModule { }

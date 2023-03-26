@@ -6,7 +6,7 @@
   </nav> -->
 
   <div *ngIf="node$ | async as node">
-    <footer *ngFor="let column of node.children" class="footer-block d-flex justify-content-center">
+    <footer *ngFor="let column of node.children" class="footer-block justify-content-center">
       <a class="footer-nav-block-item" href="/">
         <img src="../../../../../../../assets/header-logo.png">
       </a>
