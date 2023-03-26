@@ -1,7 +1,7 @@
 <div class="row align-items-center">
   <div class="col-3 left-slider-pdp">
     <ng-container *ngIf="thumbs$ | async as thumbs">
-      <cx-carousel *ngIf="thumbs.length" class="thumbs" [items]="thumbs" itemWidth="35%" [hideIndicators]="true"
+      <cx-carousel *ngIf="thumbs.length" class="thumbs" [items]="thumbs" itemWidth="33%" [hideIndicators]="true"
         [template]="thumb"></cx-carousel>
     </ng-container>
 
