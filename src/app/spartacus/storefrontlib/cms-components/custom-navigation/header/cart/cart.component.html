@@ -19,7 +19,11 @@
 <!-- <a [attr.aria-label]="
 'miniCart.item' | cxTranslate: { count: quantity$ | async }
 " [routerLink]="{ cxRoute: 'cart' } | cxUrl"> -->
-    {{quantity$ | async}} items
-<!-- </a> -->
+<span class="count">
+  {{quantity$ | async}} items
+</span>
+
 <img src="../../../../../../../assets/cart-icon.png">
-{{total$ | async}}
+<span class="total">
+  {{total$ | async}}
+</span>
