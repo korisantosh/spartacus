@@ -54,3 +54,19 @@ app-custom-product-images cx-product-image-zoom-thumbnails .carousel-panel .slid
 app-custom-product-images cx-product-image-zoom-thumbnails .carousel-panel .slides .slide .item img {
   padding-right: 5px !important;
 }
+
+.carousel-panel .slides {
+
+  img {
+    border: #666 solid 1px;
+    display: block;
+
+    &:hover {
+        box-shadow: 0px 1px 16px rgb(0 0 0 / 65%);
+    }
+  }
+
+  .is-active img {
+    border-color: var(--cx-color-visual-focus);
+  }
+}
