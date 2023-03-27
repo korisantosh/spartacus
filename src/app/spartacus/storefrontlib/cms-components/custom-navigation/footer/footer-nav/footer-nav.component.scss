@@ -1,0 +1,21 @@
+footer {
+    padding-top: 20px;
+    img {
+        max-width: 150px;
+    }
+    .footer-nav-block-item {
+        padding: 0 30px;
+        h6 {
+            font-weight: bold;
+            border-bottom: 1px solid;
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .footer-block {
+        display: flex;
+    }
+}

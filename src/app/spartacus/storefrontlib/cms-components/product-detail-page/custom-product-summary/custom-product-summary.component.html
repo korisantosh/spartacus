@@ -1,1 +1,3 @@
-<p>custom-product-summary works!</p>
+<ng-container *ngIf="product$ | async as product">
+    <div [innerHtml]="product.summary"></div>
+</ng-container>

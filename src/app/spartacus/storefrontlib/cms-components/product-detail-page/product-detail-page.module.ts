@@ -24,9 +24,9 @@ import { CustomProductImageZoomModule } from './custom-product-image-zoom/custom
         ProductIntroComponent: {
           component: CustomProductIntroductionComponent,
         },
-        // ProductSummaryComponent: {
-        //   component: CustomProductSummaryComponent,
-        // },
+        ProductSummaryComponent: {
+          component: CustomProductSummaryComponent,
+        },
       },
     } as CmsConfig),
   ],

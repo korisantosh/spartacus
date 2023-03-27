@@ -2,4 +2,5 @@
   <span *ngFor="let crumb of crumbs$ | async">
     <a [routerLink]="crumb.link" [innerHTML]="crumb.label"></a>
   </span>
+  <span class="ml-1">{{ title$ | async }}</span>
 </nav>

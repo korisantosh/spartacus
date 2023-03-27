@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderNavigationComponent } from './header-navigation/header-navigation.component';
-import { NavigationModule, MiniCartModule } from '@spartacus/storefront';
+import { NavigationModule, MiniCartModule, SearchBoxComponent } from '@spartacus/storefront';
 import { CmsConfig, ConfigModule, TranslatePipe } from '@spartacus/core';
 import { SiteLogoComponent } from './site-logo/site-logo.component';
 import { CartComponent } from './cart/cart.component';
@@ -29,7 +29,7 @@ import { CartComponent } from './cart/cart.component';
 
         // SearchBoxComponent: {
         //   component: SearchBoxComponent,
-        // }
+        // },
 
         MiniCartComponent: {
           component: CartComponent

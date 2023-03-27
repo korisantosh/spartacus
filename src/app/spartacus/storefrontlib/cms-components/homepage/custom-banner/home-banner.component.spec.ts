@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FooterNavigationComponent } from './footer-navigation.component';
+import { CustomBannerComponent } from './home-banner.component';
 
-describe('FooterNavigationComponent', () => {
-  let component: FooterNavigationComponent;
-  let fixture: ComponentFixture<FooterNavigationComponent>;
+describe('CustomBannerComponent', () => {
+  let component: CustomBannerComponent;
+  let fixture: ComponentFixture<CustomBannerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FooterNavigationComponent ]
+      declarations: [ CustomBannerComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FooterNavigationComponent);
+    fixture = TestBed.createComponent(CustomBannerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

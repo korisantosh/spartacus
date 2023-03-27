@@ -4,18 +4,16 @@ import { CmsConfig, ConfigModule, PageMetaModule } from '@spartacus/core';
 import { RouterModule } from '@angular/router';
 import { GenericLinkModule, MediaModule } from '@spartacus/storefront';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
-import { FooterNavigationComponent } from './footer-navigation/footer-navigation.component';
 import { FooterCopyrightComponent } from './footer-copyright/footer-copyright.component';
 import { HeaderModule } from './header/header.module';
+import { FooterModule } from './footer/footer.module';
 
 
 
 @NgModule({
   declarations: [
     BreadcrumbsComponent,
-    FooterNavigationComponent,
-    FooterCopyrightComponent,
-  ],
+    FooterCopyrightComponent  ],
   imports: [
     CommonModule,
     RouterModule,
@@ -24,6 +22,7 @@ import { HeaderModule } from './header/header.module';
     GenericLinkModule,
     // NavigationModule,
     HeaderModule,
+    FooterModule,
     ConfigModule.withConfig({
       cmsComponents: {
         BreadcrumbComponent: {
@@ -31,13 +30,10 @@ import { HeaderModule } from './header/header.module';
         },
         CMSParagraphComponent: {
           component: FooterCopyrightComponent,
-        },
-        // FooterNavigationComponent: {
-        //   component: FooterNavigationComponent,
-        // }
+        }
       },
     } as CmsConfig),
   ],
-  exports: [BreadcrumbsComponent, FooterCopyrightComponent, FooterNavigationComponent],
+  exports: [BreadcrumbsComponent, FooterCopyrightComponent],
 })
 export class CustomNavigationModule { }

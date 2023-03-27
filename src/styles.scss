@@ -1,12 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-$skipComponentStyles: (
-  cx-searchbox,
-  cx-mini-cart,
-);
+$skipComponentStyles: (cx-mini-cart);
+
 $styleVersion: 4.3;
-@import '~@spartacus/styles/index';
-@import '~font-awesome/css/font-awesome.css';
-//@import '~@spartacus/styles/scss/theme/santorini';
 
 :root {
   --cx-color-dark: #3e3939;
@@ -14,206 +9,64 @@ $styleVersion: 4.3;
   --cx-color-secondary: #2c2f47;
 }
 
-header {
-
-  @media screen and (min-width: 992px) {
-    background: #3e3939;
-  }
-
-  cx-navigation-ui {
-    &.flyout {
-      a {
-        &:hover {
-          color: #ffffff
-        }
-      }
-
-      span {
-        &:hover {
-          color: #ffffff;
-        }
-      }
-    }
-
-  }
-
-  .SiteLogo {
-    width: 200px;
-
-    img {
-      max-width: 100%;
-    }
-  }
-
-  .SearchBox {
-    margin: 10px 55px 0;
-    flex: 1;
-
-    label {
-      position: relative;
-
-      button.reset,
-      button.search {
-        display: none;
-      }
-
-      input {
-        border-radius: 12px;
-        box-shadow: none;
-        outline: 0;
-        border: none;
-        padding: 10px 10px 10px 32px;
-        width: 70%;
-      }
-
-      .search-icon {
-        position: absolute;
-        top: 13px;
-        color: #3e3939;
-        left: 10px;
-        font-size: 12px;
-      }
-    }
-  }
-
-  .SiteLogin {
-    padding: 0;
-
-
-
-    a {
-      color: #ffffff;
-
-      &:hover {
-        color: #fefefe;
-      }
-    }
-  }
-
-  .MiniCart {
-    padding-left: 20px;
-
-    img {
-      max-width: 25px;
-    }
-  }
-
-  .SiteContext::after {
-    display: none;
-  }
-
-  .SiteLinks {
-    visibility: hidden;
-  }
-
-}
+@import '~@spartacus/styles/index';
+//@import '~@spartacus/styles/scss/theme/santorini';
+@import './styles/spartacus/custom-header.scss';
 
 // Style for product images component - pdp page
+app-custom-product-introduction {
+  height: max-content;
+}
+app-custom-product-images cx-carousel .carousel-panel .slides .slide .item img {
+  margin: 15px auto;
+}
+app-custom-product-images cx-carousel .carousel-panel .slides .slide {
+  display: block !important;
+}
+app-custom-product-images cx-carousel .carousel-panel .slides {
+  margin: 25px 0px;
+}
+app-custom-product-images cx-carousel .fa-angle-left:before {
+  content: "\f107";
+}
+app-custom-product-images cx-carousel .fa-angle-right:before {
+  content: "\f106";
+}
+app-custom-product-images cx-carousel .previous {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+app-custom-product-images cx-carousel .next {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+app-custom-product-images cx-product-image-zoom-thumbnails .carousel-panel .slide.active {
+  display: flex !important;
+}
+app-custom-product-images cx-product-image-zoom-thumbnails .carousel-panel .slides,
+app-custom-product-images cx-product-image-zoom-thumbnails .carousel-panel .slides .slide .item img {
+  margin: 0 !important;
+}
+app-custom-product-images cx-product-image-zoom-thumbnails .carousel-panel .slides .slide .item img {
+  padding-right: 5px !important;
+}
 
-@media only screen and (min-width: 1025px) {
+.carousel-panel .slides {
 
-  app-custom-product-introduction {
-    height: max-content;
+  img {
+    border: #666 solid 1px;
+    display: block;
+
+    &:hover {
+        box-shadow: 0px 1px 16px rgb(0 0 0 / 65%);
+    }
   }
 
-  app-custom-product-images cx-carousel .carousel-panel .slides .slide .item img {
-    margin: 15px auto;
-    height: 100px;
-    width: 100px;
-    object-fit: contain;
-  }
-
-  app-custom-product-images cx-carousel .carousel-panel .slides .slide .item cx-media {
-    text-align: center;
-  }
-
-  app-custom-product-images cx-carousel .carousel-panel .slides .slide {
-    display: block !important;
-  }
-
-  app-custom-product-images cx-carousel .carousel-panel .slides {
-    margin: 25px 0px;
-  }
-
-  app-custom-product-images cx-carousel .fa-angle-left:before {
-    content: "\f107";
-  }
-
-  app-custom-product-images cx-carousel .fa-angle-right:before {
-    content: "\f106";
-  }
-
-  app-custom-product-images cx-carousel .previous,
-  app-custom-product-images cx-carousel .next {
-    position: absolute;
-    left: 50px;
-    right: 50px;
-    width: 40px;
-    height: 40px;
-  }
-
-  app-custom-product-images cx-carousel .previous {
-    bottom: -5px;
-  }
-
-  app-custom-product-images cx-carousel .next {
-    top: -5px;
-  }
-
-  app-custom-product-images cx-product-image-zoom-thumbnails .carousel-panel .slide.active {
-    display: flex !important;
-  }
-
-  app-custom-product-images cx-product-image-zoom-thumbnails .carousel-panel .slides,
-  app-custom-product-images cx-product-image-zoom-thumbnails .carousel-panel .slides .slide .item img {
-    margin: 0 !important;
-  }
-
-  app-custom-product-images cx-product-image-zoom-thumbnails .carousel-panel .slides .slide .item img {
-    padding-right: 5px !important;
-  }
-
-  app-custom-product-images cx-carousel .previous:not(:disabled):hover,
-  app-custom-product-images cx-carousel .next:not(:disabled):hover {
-    background-color: rgb(62, 57, 57);
-    border-radius: 5px;
-  }
-
-  app-custom-product-images cx-carousel .next:not(:disabled):hover .fa-angle-right:before,
-  app-custom-product-images cx-carousel .previous:not(:disabled):hover .fa-angle-left::before {
-    color: white;
-  }
-
-
-  app-custom-product-images cx-carousel .next:not(:disabled):hover .fa-angle-right,
-  app-custom-product-images cx-carousel .previous:not(:disabled):hover .fa-angle-left {
-    position: absolute;
-    left: 0;
-    right: 0;
-  }
-
-  app-custom-product-images cx-carousel .next:not(:disabled):hover .fa-angle-right {
-    top: 4px;
-  }
-
-  app-custom-product-images cx-carousel .previous:not(:disabled):hover .fa-angle-left {
-    bottom: 4px;
-  }
-
-  .left-slider-pdp {
-    padding-right: 0 !important;
-    padding-left: 0 !important;
-  }
-
-  .right-slider-pdp img {
-    width: 30vw;
-    object-fit: contain;
-    height: auto;
-  }
-
-  app-custom-product-images cx-product-image-zoom-trigger {
-    display: inline-flex !important;
-    justify-content: flex-end;
-    float: right;
+  .is-active img {
+    border-color: var(--cx-color-visual-focus);
   }
 }

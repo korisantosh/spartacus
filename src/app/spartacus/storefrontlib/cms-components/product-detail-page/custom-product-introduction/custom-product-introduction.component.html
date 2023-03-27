@@ -1,13 +1,24 @@
 <ng-container *ngIf="product$ | async as product">
   <h1>{{ product.name }}</h1>
-  <div class="d-flex align-items-center justify-content-between">
+  <h2 class="brand"> {{ product.manufacturer }} </h2>
+  <div class="d-flex align-items-center justify-content-between mb-1 mt-4">
     <h3>{{ product.price.formattedValue }}</h3>
-    <div>
-      <cx-star-rating
-        [rating]="product.averageRating"
-        [disabled]="true"
-      ></cx-star-rating>
-      <span>Read all {{ product.numberOfReviews }} Reviews</span>
+    <div class="stock-availability">
+      <span>{{ product.stock.stockLevelStatus }}</span>
     </div>
   </div>
+  <div class="d-flex align-items-center justify-content-between mb-4">
+    <span class="sku">SKU: #{{ product.code }}</span>
+    <!-- <span class="pickup">
+      {{ product.availableForPickup }}
+    </span> -->
+  </div>
+  <div class="ratting">
+    <cx-star-rating
+      [rating]="product.averageRating"
+      [disabled]="true"
+    ></cx-star-rating>
+    <span>Read all {{ product.numberOfReviews }} Reviews</span>
+  </div>
 </ng-container>
+

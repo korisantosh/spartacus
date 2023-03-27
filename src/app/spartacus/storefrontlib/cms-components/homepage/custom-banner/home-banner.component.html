@@ -29,6 +29,9 @@
     *ngIf="data.uid != 'ElectronicsHompageSplashBannerComponent'"
     class="test-banner"
   >
+  <cx-generic-link *ngIf="data.urlLink" [url]="data.urlLink" [target]="getTarget(data)">
+    <p class="headline" *ngIf="data.headline" [innerHTML]="data.headline"></p>
     <cx-media [container]="$any(data.media)" [alt]="$any(data.name)"></cx-media>
+  </cx-generic-link>
   </div>
 </ng-container>

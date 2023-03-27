@@ -7,9 +7,12 @@
   overflow: hidden;
   text-overflow: ellipsis;
   span {
+    color: #000;
+
     a {
       text-transform: capitalize;
       padding: 5px 5px;
+      color: #2480c5;
     }
     &:not(:last-child):after {
       content: "/";

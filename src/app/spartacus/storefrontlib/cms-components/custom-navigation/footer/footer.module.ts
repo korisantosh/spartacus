@@ -1,15 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FooterNavigationComponent } from './footer-navigation/footer-navigation.component';
+import { ConfigModule, CmsConfig } from '@spartacus/core';
+import { NavigationModule } from '@spartacus/storefront';
+import { FooterNavComponent } from './footer-nav/footer-nav.component';
 
 
 
 @NgModule({
   declarations: [
-    FooterNavigationComponent
+    FooterNavComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    NavigationModule,
+    ConfigModule.withConfig({
+      cmsComponents: {
+        FooterNavigationComponent: {
+          component: FooterNavComponent,
+        },
+      },
+    } as CmsConfig),
   ]
 })
 export class FooterModule { }
