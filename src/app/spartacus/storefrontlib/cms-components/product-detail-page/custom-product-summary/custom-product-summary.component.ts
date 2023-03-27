@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from '@spartacus/core';
+import { CurrentProductService } from '@spartacus/storefront';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-custom-product-summary',
@@ -7,7 +10,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomProductSummaryComponent implements OnInit {
 
-  constructor() { }
+  product$: Observable<Product | any> = this.currentProductService.getProduct();
+
+  constructor(private currentProductService: CurrentProductService) {}
 
   ngOnInit(): void {
   }

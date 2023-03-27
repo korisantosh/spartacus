@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import {
   CurrentProductService,
@@ -7,13 +7,12 @@ import {
 
 @Component({
   selector: 'app-custom-product-images',
-  templateUrl: './custom-product-images.component.html',
-  styleUrls: ['./custom-product-images.component.scss']
+  templateUrl: './product-image-zoom-product-images.component.html',
+  styleUrls: ['./product-image-zoom-product-images.component.scss']
 })
-
-export class CustomProductImagesComponent extends ProductImagesComponent {
+export class ProductImageZoomProductImagesComponent extends ProductImagesComponent {
   expandImage = new BehaviorSubject(false);
-  selectedIndex: number | undefined;
+  selectedIndex: number | any;
 
   constructor(protected currentProductService: CurrentProductService) {
     super(currentProductService);
@@ -24,6 +23,9 @@ export class CustomProductImagesComponent extends ProductImagesComponent {
     this.selectedIndex = this.mainMediaContainer.value?.zoom?.galleryIndex;
   }
 
+  /**
+   * Opens image zoom dialog.
+   */
   triggerZoom(value: boolean): void {
     this.expandImage.next(value);
   }

@@ -1,15 +1,18 @@
 .nav-breadcrumbs {
   font-size: 0.85rem;
-  padding: 10px 5px;
+  padding: 10px 110px;
   display: flex;
   justify-content: left;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   span {
+    color: #000;
+
     a {
       text-transform: capitalize;
       padding: 5px 5px;
+      color: #2480c5;
     }
     &:not(:last-child):after {
       content: "/";

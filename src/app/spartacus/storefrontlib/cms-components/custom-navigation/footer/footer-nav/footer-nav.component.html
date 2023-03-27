@@ -1,0 +1,26 @@
+<!-- <nav *ngIf="(node$ | async) as node">
+    <cx-navigation-ui
+      *ngFor="let child of node?.children"
+      [node]="child"
+    ></cx-navigation-ui>
+  </nav> -->
+
+  <div *ngIf="node$ | async as node">
+    <footer *ngFor="let column of node.children" class="footer-block justify-content-center">
+      <a class="footer-nav-block-item" href="/">
+        <img src="../../../../../../../assets/header-logo.png">
+      </a>
+      <nav *ngFor="let item of column.children" class="footer-nav-block-item">
+        <h6>{{ item.title }}</h6>
+        <div class="wrapper" *ngFor="let navItems of item.children">
+          <a class="text-white" [href]="navItems.url" [target]="navItems.target">
+            {{navItems.title}}
+          </a>
+        </div>
+        <!-- {{column.children | json}} -->
+        <!-- <div class="wrapper">
+          {{item | json}}
+        </div> -->
+      </nav>
+    </footer>
+  </div>

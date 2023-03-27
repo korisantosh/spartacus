@@ -1,7 +1,7 @@
 <div class="row align-items-center">
-  <div class="col-3">
+  <div class="col-3 left-slider-pdp">
     <ng-container *ngIf="thumbs$ | async as thumbs">
-      <cx-carousel *ngIf="thumbs.length" class="thumbs" [items]="thumbs" itemWidth="35%" [hideIndicators]="true"
+      <cx-carousel *ngIf="thumbs.length" class="thumbs" [items]="thumbs" itemWidth="33%" [hideIndicators]="true"
         [template]="thumb"></cx-carousel>
     </ng-container>
 
@@ -11,18 +11,11 @@
       </cx-media>
     </ng-template>
   </div>
-  <div class="col-9">
+  <div class="col-9 right-slider-pdp">
     <ng-container *ngIf="mainImage$ | async as main">
       <cx-media [container]="main" (click)="triggerZoom(true)"></cx-media>
-      <cx-product-image-zoom-trigger
-          [expandImage]="expandImage.value"
-          (dialogClose)="triggerZoom(false)"
-        ></cx-product-image-zoom-trigger>
-        <!-- <cx-product-image-zoom-trigger
-          [expandImage]="expandImage.value"
-          [galleryIndex]="selectedIndex"
-          (dialogClose)="triggerZoom(false)"
-        ></cx-product-image-zoom-trigger> -->
+      <cx-product-image-zoom-trigger [expandImage]="expandImage.value" [galleryIndex]="selectedIndex"
+        (dialogClose)="triggerZoom(false)"></cx-product-image-zoom-trigger>
     </ng-container>
   </div>
 </div>
